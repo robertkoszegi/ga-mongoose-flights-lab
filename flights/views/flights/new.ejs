@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/javascripts/script.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title><%= title %></title>
+</head>
+
+<body>
+    <!-- Form action changes depending on customers.id -->
+    <h1><%= title %></h1>
+
+    <form action="/flights/" method="POST" autocomplete="off"><br>
+        <input placeholder="Airline" type="text" name="airline"  value="" ><br>
+        <input placeholder="Airport" type="text" name="airport" value="" ><br>
+        <input placeholder="Flight Number" type="text" name="flightNo" value="" ><br>
+        <input placeholder="Depart Date" type="datetime-local" name="departs" value="" ><br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <a href="/"><button>Cancel</button></a>
+</body>
+</html>
