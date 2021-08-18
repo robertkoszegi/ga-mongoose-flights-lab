@@ -1,0 +1,23 @@
+
+  <%- include('../partials/header') %>
+
+    <!-- submit new -->
+    <form action="/flights/<%= flight.id %>/newTicket" method="POST" autocomplete="off"><br>
+
+      <h1>Ticket for flight No.  <%= flight.flightNo %></h1>
+      <label for="seat">Seat:</label>
+      <input name="seat" required pattern="[A-F][1-9]\d?">
+      <br>
+      <br>
+      <label for="price">Price:</label>
+      <input name="price" type="number">
+
+      <button type="submit">Create Ticket</button>
+        
+    </form>
+    <br>
+    <a href="/flights/<%= flight.id %>"><button>Cancel</button></a>
+
+    
+
+    <%- include('../partials/footer') %>

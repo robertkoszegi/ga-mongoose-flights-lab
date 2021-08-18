@@ -13,8 +13,13 @@ const destinationSchema = new Schema({
         type: String,
         enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN'],
     },
-    arrival: Date,
-
+    arrival: {
+        type: Date,
+        default: function() {
+            oneYearFromNow = new Date();
+            return new Date(oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1))
+        }
+    }
 },
 {
     timestamps:true
