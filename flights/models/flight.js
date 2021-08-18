@@ -4,8 +4,6 @@ const mongoose = require('mongoose')
 // Shortcut to the mongoose.Schema class
 const Schema = mongoose.Schema;
 
-/* !!! Schema order seems to matter !!! */
-
 
 /* DESTINATIONS SCHEMA */
 const destinationSchema = new Schema({

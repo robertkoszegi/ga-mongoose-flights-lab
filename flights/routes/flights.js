@@ -1,8 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const flightCtrl = require("../controllers/flights");
-// const ticketsCtrl = require('../controllers/tickets')
-// const destinationCtrl = require('./destinations');
+
 
 /* GET Routes */
 router.get('/', flightCtrl.index); // all flights
@@ -15,7 +14,7 @@ router.get('/:id', flightCtrl.show);
 /* POST Routes */
 router.post('/', flightCtrl.create);
 
-//New ticket create
+// New ticket create
 router.post('/:id/newTicket', flightCtrl.createTicket); 
 
 
